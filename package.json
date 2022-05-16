@@ -1,0 +1,23 @@
+{
+  "name": "impacto-norte-backend",
+  "version": "1.0.0",
+  "description": "desarrollo backend de impacto del norte",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "dev": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranzCortez/ImpactoNorte_backend.git"
+  },
+  "author": "Franz Cortez Olmedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranzCortez/ImpactoNorte_backend/issues"
+  },
+  "homepage": "https://github.com/FranzCortez/ImpactoNorte_backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
