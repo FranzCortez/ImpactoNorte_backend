@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import generarId from "../helpers/generarId.js";
 
@@ -10,8 +10,7 @@ const usuarioSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     },
     email: {
         type: String,

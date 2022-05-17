@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import generarId from "../helpers/generarId.js";
 
 const clienteSchema = mongoose.Schema({
