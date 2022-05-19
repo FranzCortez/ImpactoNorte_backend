@@ -1,6 +1,7 @@
 import express from "express";
 import { 
-    registrar 
+    registrar,
+    login
 } from "../controllers/usuarioController.js";
 import { 
     registrarCliente,
@@ -12,6 +13,9 @@ import {
 
 
 const router = express.Router();
+
+// Inicio de sesion
+router.post('/login', login);
 
 // clientes
 router.get('/cliente', verClientes);
