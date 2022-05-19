@@ -1,7 +1,8 @@
 import express from "express";
 import { 
     registrar,
-    login
+    login,
+    perfil
 } from "../controllers/usuarioController.js";
 import { 
     registrarCliente,
@@ -10,6 +11,7 @@ import {
 import { 
     registrarContacto 
 } from "../controllers/contactoClienteController.js";
+import checkAuth from "../middleware/authMiddleware.js";
 
 
 const router = express.Router();
@@ -18,11 +20,12 @@ const router = express.Router();
 router.post('/login', login);
 
 // clientes
-router.get('/cliente', verClientes);
-router.post('/cliente/registrar', registrarCliente);
-router.post('/cliente/registrar/contacto', registrarContacto);
+router.get('/cliente', checkAuth, verClientes);
+router.post('/cliente/registrar', checkAuth, registrarCliente);
+router.post('/cliente/registrar/contacto', checkAuth, registrarContacto);
 
 // perfil
-router.post('/perfil/registrar', registrar);
+router.get('/perfil', checkAuth, perfil);
+router.post('/perfil/registrar', checkAuth, registrar);
 
 export default router;
